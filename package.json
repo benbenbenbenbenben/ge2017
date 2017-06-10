@@ -1,0 +1,19 @@
+{
+  "name": "ge2017",
+  "version": "1.0.0",
+  "description": "data from the uk 2017 general election",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benbenbenbenbenben/ge2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benbenbenbenbenben/ge2017/issues"
+  },
+  "homepage": "https://github.com/benbenbenbenbenben/ge2017#readme"
+}
