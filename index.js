@@ -1,15 +1,14 @@
 const _ = require('lodash')
 
-let gruad = require('./gruad.json')
-let yougov = require('./yougov.json')
+let gruad = _.orderBy(require('./gruad.json'), "name")
+let yougov = _.orderBy(require('./yougov.json'), "constituency")
 
-_.range(yougov.length).forEach(
-  i => {
 
-    let needle = yougov[i].constituency
-    let result = gruad.filter(r => r.name == needle)
-    if (result.length == 0) {
-      console.log("could not find " + needle)
-    }
+yougov.map((u, i) => {
+
+  return {
+    name: u.constituency,
+    winner_est: _.max(u.data.map(d => d.max)),
+    winner_act: _.max(gruad[i].candidates.map(y => y.percentageShare))
   }
-)
+})
